@@ -1,4 +1,6 @@
-
+$(window).load(function (){
+    generateSquares(16);
+});
 function generateShits(){
 //        var newDiv = document.createElement("div");
             
@@ -149,3 +151,47 @@ $(window).on("mousewheel", function(event){
     }
 
 });
+
+function powerOfTwo(arg1){
+    if(!isNaN(arg1)){
+        return (arg1 & (arg1 - 1)) == 0;
+    }
+}
+
+function canSquare(arg1){
+    if(!isNaN(arg1)){
+        return (Math.sqrt(arg1) % 1) == 0;
+    }
+}
+
+function generateSquares(arg1){
+    console.log("generating squares : " + arg1);
+    if(!isNaN(arg1) && canSquare(arg1)){
+        var containerDiv = document.getElementById("placeholderSquares");
+        while (containerDiv.firstChild) {
+            containerDiv.removeChild(containerDiv.firstChild);
+        }
+        var toBreak = Math.sqrt(arg1);
+        console.log("toBreak = " + toBreak);
+        
+        for(var i=0;i<toBreak;i++){
+            var squareRow = document.createElement("div");
+            squareRow.classList.add("squareRow");
+            for(var j=0;j<toBreak;j++){
+                var newSquare = document.createElement("div");
+                newSquare.classList.add("square");
+                newSquare.addEventListener("mouseover", changeColour);
+                newSquare.addEventListener("mousedown", changeColour);
+                squareRow.appendChild(newSquare);
+
+            }
+            containerDiv.appendChild(squareRow);
+        }
+        
+    }
+    else{
+        console.log("shit, man, it's all wrong");
+    }
+}
+
+
