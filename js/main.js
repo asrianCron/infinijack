@@ -1,5 +1,6 @@
 $(window).load(function (){
-    generateSquares(16);
+//    generateSquares(16);
+//    $( "#placeholderSquares" ).draggable();
 });
 function generateShits(){
 //        var newDiv = document.createElement("div");

@@ -7,13 +7,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
+        <link href="css/jquery-ui.css" rel="stylesheet">
         <script src="js/vendor/jquery-1.11.2.js"></script>
         <script src="js/jquery.mousewheel.js"></script>
+        <script src="js/jquery-ui.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/resize.js"></script>
         <script src="js/pixel-sprite-generator.js"></script>
 		<script src="js/main.js"></script>
         <script src="js/events.js"></script>
+        
 	</head>
 	<body>
         <nav class="navbar navbar-default">
@@ -81,8 +84,12 @@
           </div><!-- /.container-fluid -->
         </nav>
         
-        <div id="placeholderSquares">
+        <div id="placeholderSquares" class="ui-widget-content">
         </div>
-        
+<!--
+            <div id="draggable" class="ui-widget-content">
+                <p>Drag me around</p>
+            </div>
+-->
 	</body>
 </html>

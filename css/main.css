@@ -20,10 +20,10 @@
 .squareRow {
 /*    background-color: red;*/
     border: 0px;
-
 }
 
 #placeholderSquares {
+    
     font-size: 0;/* fixer for the space between divs when using inline-block, because what the fuck*/
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -33,4 +33,11 @@
     user-select: none;
     
     cursor: default;
+    position : relative;
+    width : auto;
+    display : table;
+}
+
+#draggable {
+    width: 150px; height: 150px; padding: 0.5em;
 }
